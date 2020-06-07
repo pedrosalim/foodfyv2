@@ -1,0 +1,24 @@
+.about h1 {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 24px;
+    color: var(--color_primary);
+
+    margin: 50px 0 20px;
+}
+
+.about h2 {
+    margin-top: 20px;
+    color: var(--color_primary);
+    font-size: 20px;
+}
+
+.about p {
+    margin-top: 20px;
+    color: #444444;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.links a.active {
+    font-weight: bold;
+}
