@@ -19,14 +19,3 @@ for (let card of cards) {
 document.querySelector('.close-modal').addEventListener('click', function() {
     modalOverlay.classList.remove('active')
 })
-
-const currentPage = location.pathname
-const menuItems = document.querySelectorAll("header .links a")
-
-for (item of menuItems) {
-    if (currentPage.includes(item.getAttribute("href"))) {
-        item.classList.add("active")
-    }
-}
-
-
