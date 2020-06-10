@@ -39,41 +39,13 @@
         </div>
 
         <section class="cards">
-            <div class="card" id="burger">
-                <img src="/assets/burger.png" alt="Burger">
-                <h4 class="title">Triplo bacon burguer</h4>
-                <p class="author">por Jorge Relato</p>
-            </div>
-
-            <div class="card" id="pizza">
-                <img src="/assets/pizza.png" alt="Pizza">
-                <h4 class="title">Pizza 4 estações</h4>
-                <p class="author">por Fabiana Melo</p>
-            </div>
-
-            <div class="card" id="espaguete">
-                <img src="/assets/espaguete.png" alt="espaguete">
-                <h4 class="title">Espaguete ao alho</h4>
-                <p class="author">por Júlia Kinoto</p>
-            </div>
-
-            <div class="card" id="lasanha">
-                <img src="/assets/lasanha.png" alt="lasanha">
-                <h4 class="title">Lasanha mac n' cheese</h4>
-                <p class="author">por Juliano Vieira</p>
-            </div>
-
-            <div class="card" id="doce">
-                <img src="/assets/doce.png" alt="doce">
-                <h4 class="title">Docinhos pão-do-céu</h4>
-                <p class="author">por Ricardo Golvea</p>
-            </div>
-
-            <div class="card" id="asinhas">
-                <img src="/assets/asinhas.png" alt="asinhas">
-                <h4 class="title">Asinhas de frango ao barbecue</h4>
-                <p class="author">por Vania Steroski</p>
-            </div>
+            {% for recipe in recipes %}
+                <div class="card" id="{{loop.index0}}">
+                    <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+                    <h4 class="title">{{recipe.title}}</h4>
+                    <p class="author">{{recipe.author}}</p>
+                </div>
+            {% endfor %}
         </section>
 
 {% endblock content %}
@@ -100,8 +72,8 @@
 {% endblock scripts %}
 
         
-<footer>
-    {% block footer %}
+{% block footer %}
+    <footer>
         <p>Todos os direitos reservados, receitas FOODFY.</p>
-    {% endblock footer %}
-</footer>
+    </footer>
+{% endblock footer %}
