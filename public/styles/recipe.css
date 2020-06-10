@@ -22,9 +22,13 @@
 
 /* >>>> MOST INFORMATION <<<< */
 
+
+
 .card_content {
+    display: none;
     margin-bottom: 39px;
     margin-left: 0;
+    
 }
 
 .card_content p {
@@ -35,6 +39,7 @@
 }
 
 .card_title {
+    margin-top: 39px;
     display: flex;
 }
 
@@ -62,8 +67,10 @@
     cursor: pointer;
 }
 
-
-
 .show_content { 
     display: inline;
+}
+
+.show:hover {
+    text-decoration: underline;
 }
