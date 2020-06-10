@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    {% block head %}
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" href="/styles/main.css">
+            <link rel="stylesheet" href="/styles/about.css">
+
+            <title>FOODFY</title>
+        </head>
+    {% endblock head %}
+
+<body>
+        
+<div class="content">
+{% block header %}
+    <header>
+        <a class="logo" href="/"><img src="/assets/logo.png" alt="FOODFY"></a>
+        <a href="/about">Sobre</a>
+        <a href="/recipes">Receitas</a>
+    </header>  
+{% endblock header %}
+
+
+{% block content %}
+{% endblock content %}      
+    
+    
+{% block modal %}
+{% endblock modal %}
+
+</div>
+
+
+        
+{% block scripts %}
+{% endblock scripts %}
+
+{% block footer %}
+{% endblock %}
+            
+</body>
+
+</html>
