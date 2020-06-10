@@ -1,0 +1,69 @@
+.recipe_card img {
+    border-radius: 15px;
+    margin: 50px 0 50px 0;
+}
+
+.recipe_card h4 {
+    color: var(--color_primary);
+
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 36px;
+    text-align: center;
+
+    margin-bottom: 4px;
+}
+
+.recipe_card p {
+    color: #777777;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+/* >>>> MOST INFORMATION <<<< */
+
+.card_content {
+    margin-bottom: 39px;
+    margin-left: 0;
+}
+
+.card_content p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    font-weight: normal;
+}
+
+.card_title {
+    display: flex;
+}
+
+.card_title h1{
+    margin-bottom: 20px;
+}
+
+.card_title p {
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.recipe_ingredients ul,
+.recipe_preparation ul{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.show {
+    color: #999999;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: 'Roboto-Bold', sans-serif;
+    cursor: pointer;
+}
+
+
+
+.show_content { 
+    display: inline;
+}
