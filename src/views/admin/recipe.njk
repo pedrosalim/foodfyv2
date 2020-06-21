@@ -1,11 +1,10 @@
-{% extends "layout.njk" %}
+{% extends "admin/layout.njk" %}
 
 {% block head %}
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/styles/mainAdm.css">
         <link rel="stylesheet" href="/styles/main.css">
         <link rel="stylesheet" href="/styles/recipe.css">
 
@@ -17,7 +16,7 @@
 
 <section class="recipes">
     <div class="recipe_card">
-        <img src="{{recipe.image}}" alt="Imagem de {{item.title}}">
+        <img src="{{./recipe.image}}" alt="Imagem de {{item.title}}">
         <h4 class="title">{{recipe.title}}</h4>
         <p class="author">{{recipe.author}}</p>
     </div>

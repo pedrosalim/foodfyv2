@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "admin/layout.njk" %}
 
 
 {% block head %}
@@ -30,7 +30,7 @@
                 <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
                 <h4 class="title">{{recipe.title}}</h4>
                 <p class="author">{{recipe.author}}</p>
-                <a href="#">Visualizar</a>
+                <a href="/recipe/:index">Visualizar</a>
             </div>
         {% endfor %}
 
@@ -39,8 +39,6 @@
     {% endblock content %}
 
 </div>
-
-
 
 
 {% block footer %}
