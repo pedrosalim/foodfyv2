@@ -1,3 +1,10 @@
+*   {
+    margin: 0;
+    padding: 0; 
+    border:none; 
+    box-sizing:border-box
+}
+
 .recipe_card img {
     border-radius: 15px;
     margin: 50px 0 50px 0;
