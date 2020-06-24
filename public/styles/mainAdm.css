@@ -28,21 +28,20 @@ html {
 }
 
 header {
+    background: var(--color_primary);
     height: 80px;
     position: relative;
     display: flex;
-    background: var(--color_primary);
 }
 
 header img {
     margin-top: 27px;
-    margin-left: 231px;
+    margin-left: 490px;
 }
 
 h1 {
     font-weight: bold;
     font-size: 24px;
-    margin-left: 231px;
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -51,7 +50,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     cursor: pointer;
-    margin-left: 231px;
+    
 }
 
 .cards img {

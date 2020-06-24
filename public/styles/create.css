@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --color_primary: #111111;
+    --color_second: #000000;
+}
+
+* {
+    margin: 0;
+}
+
+.teste {
+    height: 80px;
+    position: relative;
+    display: flex;
+    background: var(--color_primary);
+    margin-top: 0 !important;
+}
+
+.teste img {
+    margin-top: 27px;
+}
+
+.details {
+    margin-top: 55px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color_primary);
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color_primary);
+}
+
+.head {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 159px 159px;
+    margin-bottom: 30px;
+}
+
+.head span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.head span:last-child {
+    justify-self: end;
+}
+
+.head button {
+    background-color: #6558C3;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 9px 20px;
+    align-items: flex-end;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deleteRecipe button {
+    background-color: crimson;
+}
+
+input {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 940px;
+    margin-top: 10px;
+    padding: 15px 20px;
+}
+
+textarea {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    width: 940px;
+    margin-top: 10px;
+    padding: 15px 20px;
+}
