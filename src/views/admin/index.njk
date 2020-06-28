@@ -1,0 +1,35 @@
+{% extends "admin/layoutAdm.njk" %}
+
+
+{% block header %}
+    <header class="adminHeader">
+        <a class="logo" href="/"><img src="/assets/logo-white.png" alt="FOODFY"></a>
+    </header>  
+{% endblock header %}
+
+{% block content %}
+
+<h1>Gerenciar Receitas</h1>
+
+<section class="cards-admin">
+    {% for recipe in recipes %}
+        <div class="card-admin" id="{{loop.index0}}">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+            <h4 class="title-admin">{{recipe.title}}</h4>
+            <p class="author-admin">{{recipe.author}}</p>
+            <a href="#">Visualizar</a>
+        </div>
+    {% endfor %}
+</section>
+
+{% endblock content %} 
+
+{% block scripts %}
+    <script src="/scripts.js"></script>
+{% endblock scripts %}
+
+{% block footer %}
+    <footer>
+        <p>Todos os direitos reservados, receitas FOODFY.</p>
+    </footer>
+{% endblock %}

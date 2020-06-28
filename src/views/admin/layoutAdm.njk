@@ -5,8 +5,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <link rel="stylesheet" href="/styles/main.css">
-            <link rel="stylesheet" href="/styles/about.css">
+            <link rel="stylesheet" href="/styles/adm.css">
 
             <title>FOODFY</title>
         </head>
@@ -14,11 +13,14 @@
 
 <body>
         
+<div class="adminHeader">
 {% block header %}
     <header>
-        <a class="logo" href="/"><img src="/assets/logo-white" alt="FOODFY"></a>
+        <a class="logo" href="/"><img src="/assets/logo-white.png" alt="FOODFY"></a>
     </header>  
 {% endblock header %}
+</div>
+
 
 <div class="contentAdm">
 
@@ -30,8 +32,6 @@
 {% endblock modal %}
 
 </div>
-
-
         
 {% block scripts %}
 {% endblock scripts %}
