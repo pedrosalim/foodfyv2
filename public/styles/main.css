@@ -5,6 +5,21 @@
     --color_second: #000000;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    
+
+}
+     
+::-webkit-scrollbar-track {
+    background: #cfcfcf;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #777777;
+    border-radius: 10px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +46,7 @@ header {
     margin-top: 36px;
     position: relative;
     display: flex;
+    margin-bottom: 56px;
 }
 
 header a + a {
@@ -208,8 +224,4 @@ footer p {
     width: 600px;
     height: 200px;
     border-radius: 15px;
-}
-
-.links a.active {
-    font-weight: bold;
 }

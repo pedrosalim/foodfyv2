@@ -17,6 +17,20 @@ html {
     background-color: white;
 }
 
+header {
+    position: relative;
+    display: flex;
+    margin-bottom: 56px;
+    background-color: var(--color_primary);
+    height: 80px;
+    width: 100%;
+}
+
+.adminHeader img {
+    margin-left: 231px;
+    margin-top: 27px;
+}
+
 .contentAdm {
     display: flex;
     flex-direction: column;
@@ -27,33 +41,22 @@ html {
     justify-content: space-between;
 }
 
-header {
-    background: var(--color_primary);
-    height: 80px;
-    position: relative;
-    display: flex;
-}
-
-header img {
-    margin-top: 27px;
-    margin-left: 490px;
-}
-
 h1 {
     font-weight: bold;
     font-size: 24px;
-    margin-top: 50px;
+    color: var(--color_primary);
     margin-bottom: 30px;
 }
 
-.cards {
+/* >>>> CARDS <<<< */
+
+.cards-admin {
     display: grid;
     grid-template-columns: 1fr 1fr;
     cursor: pointer;
-    
 }
 
-.cards img {
+.cards-admin img {
     width: 172px;
     height: 80px;
     border-radius: 8px;
@@ -62,14 +65,14 @@ h1 {
     float: left;
 }
 
-.cards h4 {
+.cards-admin h4 {
     color: var(--color_primary);
     font-size: 18px;
     margin-bottom: 5px;
     display: inline-block;
 }
 
-.cards p {
+.cards-admin p {
     margin-bottom: 10px;
     padding-left: 20px;
     font-size: 14px;
@@ -77,11 +80,11 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-.cards a {
+.cards-admin a {
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
     color: #6558C3;
+    font-weight: bold;
 }
 
 /* >>>> FOOOTER <<<< */
