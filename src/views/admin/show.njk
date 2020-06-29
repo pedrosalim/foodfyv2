@@ -1,16 +1,11 @@
-{% extends "layout.njk" %}
+{% extends "admin/layoutAdm.njk" %}
 
-{% block head %}
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/styles/main.css">
-        <link rel="stylesheet" href="/styles/recipe.css">
-
-        <title>FOODFY</title>
-    </head>
-{% endblock head %}
+{% block header %}
+    <header class="adminHeader">
+        <a class="logo" href="/"><img src="/assets/logo-white.png" alt="FOODFY"></a>
+    </header>  
+{% endblock header %}
 
 {% block content %}
 
@@ -28,6 +23,7 @@
     <div class="recipe_ingredients content_list">
         <div class="card_title">
             <h1>Ingredientes</h1>
+            <p class="show">MOSTRAR</p>
         </div>
 
         <div class="card_content">
@@ -43,6 +39,7 @@
     <div class="recipe_preparation content_list">
         <div class="card_title">
             <h1>Modo de preparo</h1>
+            <p class="show">MOSTRAR</p>
         </div>
 
         <div class="card_content">
@@ -58,6 +55,7 @@
     <div class="recipe_information content_list">
         <div class="card_title">
             <h1>Informações adicionais</h1>
+            <p class="show">MOSTRAR</p>
         </div>
 
         <div class="card_content">
@@ -67,11 +65,6 @@
 </section>
 
 {% endblock content %}
-
-{% block scripts %}
-    <script src="/scripts.js"></script>
-{% endblock scripts %}
-
 
 {% block footer %}
     <footer>

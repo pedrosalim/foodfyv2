@@ -24,27 +24,15 @@
 
     {% block content %}    
 
-    <div class="most_accessed">
-        <h1>Mais acessadas</h1>
-    </div>
 
     <section class="cards">
         {% for recipe in recipes %}
             <div class="card" id="{{loop.index0}}">
-                <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+                <img src="{{recipe.image_url}}" alt="Imagem de {{recipe.title}}">
                 <h4 class="title">{{recipe.title}}</h4>
                 <p class="author">{{recipe.author}}</p>
             </div>
         {% endfor %}
-
-        {% for recipe in recipes %}
-            <div class="card" id="{{loop.index0}}">
-                <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
-                <h4 class="title">{{recipe.title}}</h4>
-                <p class="author">{{recipe.author}}</p>
-            </div>
-        {% endfor %}
-
     </section>
 
 {% endblock content %}
