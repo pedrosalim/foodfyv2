@@ -13,8 +13,21 @@ exports.recipes = function(req, res) {
 }
 
 exports.recipe = function(req, res) {
-    const recipeIndex = req.params.index
-    const recipe = recipes[recipeIndex]
+
+    const { id } = req.params
+
+    const foundRecipe = data.recipes.find(function(recipe) {
+        return recipe.id == id
+    })
+
+    if (!foundRecipe) return res.send("Recipe not found!")
+
+    const recipe = {
+        ...foundRecipe
+    }
+
+    //const recipeIndex = req.params.index
+    //const recipe = recipes[recipeIndex]
  
-    return res.render("recipe", {recipe})
+    return res.render("./recipe", {recipe})
 }
