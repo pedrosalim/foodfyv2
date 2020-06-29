@@ -7,7 +7,7 @@ const public = require('./controllers/public')
 routes.get("/", public.home)
 routes.get("/about", public.about)
 routes.get("/recipes", public.recipes)
-routes.get("/recipe/:index", public.recipe)
+routes.get("/recipe/:id", public.recipe)
 
 
 /* >>>> ADMIN <<<< */
