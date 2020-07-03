@@ -17,7 +17,7 @@
             <img src="{{recipe.image_url}}" alt="Imagem de {{recipe.title}}">
             <h4 class="title-admin">{{recipe.title}}</h4>
             <p class="author-admin">{{recipe.author}}</p>
-            <a href="admin/show/{{recipe.id}}">Visualizar</a>
+            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
         </div>
     {% endfor %}
 </section>

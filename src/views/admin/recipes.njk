@@ -3,15 +3,23 @@
 
 {% block header %}
     <header class="adminHeader">
-        <a class="logo" href="/"><img src="/assets/logo-white.png" alt="FOODFY"></a>
+        
+        <a class="logo" href="/admin/recipes/index"><img src="/assets/logo-white.png" alt="FOODFY"></a>
     </header>  
 {% endblock header %}
 
 {% block content %}
 
+
+
+<div class="header">
+    <h2>Receita: {{recipe.title}}</h2>
+    <a href="#" class="button">Editar receita</a>
+</div>
+
 <section class="recipes">
     <div class="recipe_card">
-        <img src="{{recipe.image}}" alt="Imagem de {{item.title}}">
+        <img src="{{recipe.image_url}}" alt="Imagem de {{item.title}}">
         <h4 class="title">{{recipe.title}}</h4>
         <p class="author">{{recipe.author}}</p>
     </div>
@@ -23,7 +31,6 @@
     <div class="recipe_ingredients content_list">
         <div class="card_title">
             <h1>Ingredientes</h1>
-            <p class="show">MOSTRAR</p>
         </div>
 
         <div class="card_content">
@@ -39,7 +46,6 @@
     <div class="recipe_preparation content_list">
         <div class="card_title">
             <h1>Modo de preparo</h1>
-            <p class="show">MOSTRAR</p>
         </div>
 
         <div class="card_content">
@@ -55,11 +61,9 @@
     <div class="recipe_information content_list">
         <div class="card_title">
             <h1>Informações adicionais</h1>
-            <p class="show">MOSTRAR</p>
         </div>
 
         <div class="card_content">
-            <p>{{recipe.information}}</p>
         </div>
     </div>
 </section>
