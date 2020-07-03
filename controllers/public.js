@@ -12,7 +12,7 @@ exports.recipes = function(req, res) {
     return res.render("recipes", {recipes: data.recipes})
 }
 
-exports.recipe = function(req, res) {
+exports.show = function(req, res) {
 
     const { id } = req.params
 
