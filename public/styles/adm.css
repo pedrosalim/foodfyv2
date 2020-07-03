@@ -48,6 +48,32 @@ h1 {
     margin-bottom: 30px;
 }
 
+.header {
+    display: flex;
+}
+
+.header h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--color_primary);
+}
+
+.header a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 9px;
+    background-color: #7159c1;
+    border-radius: 5px;
+    width: 136px;
+    height: 37px;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    right: 25.5%;
+}
+
 /* >>>> CARDS <<<< */
 
 .cards-admin {
@@ -85,6 +111,64 @@ h1 {
     font-size: 14px;
     color: #6558C3;
     font-weight: bold;
+}
+
+/* >>>> PAGE RECIPES <<<< */
+
+.recipe_card img {
+    border-radius: 15px;
+    margin: 50px 0 50px 0;
+    max-width: 940px;
+}
+
+.recipe_card h4 {
+    color: var(--color_primary);
+
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 36px;
+    text-align: center;
+
+    margin-bottom: 4px;
+}
+
+.card_content {
+    margin-bottom: 39px;
+    margin-left: 0;
+}
+
+.recipe_card p {
+    color: #777777;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+.card_content p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    font-weight: normal;
+}
+
+.card_title {
+    margin-top: 39px;
+    display: flex;
+}
+
+.card_title h1{
+    margin-bottom: 20px;
+}
+
+.card_title p {
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.recipe_ingredients ul,
+.recipe_preparation ul{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
 }
 
 /* >>>> FOOOTER <<<< */

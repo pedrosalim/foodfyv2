@@ -8,6 +8,8 @@
 .recipe_card img {
     border-radius: 15px;
     margin: 50px 0 50px 0;
+    max-width: 940px;
+    
 }
 
 .recipe_card h4 {
@@ -32,7 +34,6 @@
 
 
 .card_content {
-    display: none;
     margin-bottom: 39px;
     margin-left: 0;
     
@@ -75,9 +76,10 @@
 }
 
 .show_content { 
-    display: inline;
+    display: none;
 }
 
 .show:hover {
     text-decoration: underline;
 }
+
