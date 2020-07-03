@@ -7,13 +7,12 @@ const public = require('./controllers/public')
 routes.get("/", public.home)
 routes.get("/about", public.about)
 routes.get("/recipes", public.recipes)
-routes.get("/recipe/:id", public.recipe)
+routes.get("/recipe/:id", public.show)
 
 
 /* >>>> ADMIN <<<< */
 
 routes.get("/admin/recipes/index", recipes.index)
-
-routes.get("/admin/recipes/show", recipes.show)
+routes.get("/admin/recipes/:id", recipes.show)
 
 module.exports = routes
