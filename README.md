@@ -7,7 +7,7 @@ Este projeto está sendo realizado durante o bootcamp [Launchbase da rocketseat]
 
 Tem como objetivo a fixação dos ensinamentos passados nos módulos.
 
-## Tecnologias e Frameworks
+## ```Tecnologias e Frameworks```
 
 #### ```Frontend:``` 
 * Nunjucks
@@ -19,11 +19,11 @@ Tem como objetivo a fixação dos ensinamentos passados nos módulos.
 * Javascript [NodeJS](https://nodejs.org/en/)
 * Framework [Express](https://expressjs.com/)
 
-## ```Como Utilzar```
+## ```Como Utilizar```
 
 1. Baixe o projeto com ```git clone()```
 ou
-Baixe o projeto como zip.
+Baixe o projeto como ```zip```.
 
 2. Execute npm install no terminal para instalar as dependências.
 
