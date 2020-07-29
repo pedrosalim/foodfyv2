@@ -25,3 +25,43 @@ for (let attribute of contentList) {
         }
     })
 }
+
+/* CAMPO DINAMICO */
+
+const addField = {
+    add(parentSelector) {
+        const parent = document.querySelector(parentSelector)
+
+        if(parent) {
+            const fields = parent.querySelector("input")
+            const lastField = fields[fields.length - 1]
+
+            if (lastField && lastField.value === '') return false
+            
+            const newField = lastField && lastField.cloneNode(true)
+
+            newField.value = ''
+
+            parent.appendChild(newField)
+
+            return newField
+        }
+
+        return false
+    },
+
+    list() {
+        const addIngredient = document.querySelector(".addIngredients")
+        const addPreparation = document.querySelector(".addPreparations")
+
+        if (addIngredient) {
+            document.querySelector('.addIngredients').addEventListener("click", () => { addField.add('#newIngredient') })
+        }
+
+        if (addPreparation) {
+            document.querySelector('.addPreparations').addEventListener("click", () => { addField.add('#newPreparation') })
+        }
+    }
+}
+
+addField.listen()
