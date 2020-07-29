@@ -188,3 +188,81 @@ footer p {
     text-align: center;
     padding-top: 23px;
 }
+
+/* >>>> DETAILS <<<< */
+
+.details_admin {
+    padding: 32px;
+}
+
+.details_admin .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.details_admin .item:last-child {
+    border: none;
+}
+
+.details h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.details_admin .item div:nth-child(1) {
+    font-size: 16px;
+    line-height: 26px;
+    color: black;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details_admin .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* >>>> FORM <<<< */
+
+input, select {
+    width: 100%;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+    border-style: dashed;
+    border-color: #111111;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.recipe_intro {
+    margin-top: 55px;
+}
+
+.recipe_text {
+    display: inline-block;
+}
+
+.recipe_button {
+    float: right;
+}
+
+button[type="submit"] {
+    padding: 8px 32px;
+    color: white;
+    background-color: #6558C3;
+    border-radius: 4px;
+}
+
+button[type="button"] {
+    color: #6558C3;
+    font-weight: bold;
+    font-size: 16px;
+    background: none;
+    cursor: pointer;
+}
