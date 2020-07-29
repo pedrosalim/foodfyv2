@@ -23,3 +23,11 @@ exports.show = function(req, res) {
  
     return res.render("./admin/recipes", {recipe})
 }
+
+exports.create = function(req, res) {
+    return res.render("admin/create")
+}
+
+exports.post = function(req, res) {
+    return res.send("OK")
+}
