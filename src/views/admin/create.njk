@@ -9,19 +9,20 @@
 
 {% block content %}
 
-<h1>Gerenciar Receitas</h1>
+<section class="recipe_intro">
+    <div class="recipe_text">
+        <h1>Criando receita</h1>
+    </div>
 
-<span>Criar</span>
+    <div class="recipe_button">
+        <button class="button_save" type="submit" form="form_save">Salvar Receita</button>
+    </div>
+</section>
 
-<section class="cards-admin">
-    {% for recipe in recipes %}
-        <div class="card-admin" id="{{loop.index0}}">
-            <img src="{{recipe.image_url}}" alt="Imagem de {{recipe.title}}">
-            <h4 class="title-admin">{{recipe.title}}</h4>
-            <p class="author-admin">{{recipe.author}}</p>
-            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
-        </div>
-    {% endfor %}
+<section class="details_admin">
+    <form action="/admin/recipes" method="POST" id="form_save">
+        {% include 'admin/fields.njk' %}
+    </form>
 </section>
 
 {% endblock content %} 
