@@ -8,7 +8,7 @@
 <div class="item">
     <div>Nome da Receita</div>
     <div>
-        <input type="text" name="name" value="{{ recipe.name }}">
+        <input type="text" name="title" value="{{ recipe.title }}">
     </div>
 </div>
 
@@ -42,11 +42,11 @@
         <div id="newPreparation">
             {% if (recipe.preparation.length > 0) %}
                 {% for preparation in recipe.preparations %}
-                    <input type="text" name="preparations[]" value="{{ preparation }}" required>
+                    <input type="text" name="preparation[]" value="{{ preparation }}" required>
                 {% endfor %}
 
             {% else %}
-                <input type="text" name="preparations[]" value="{{ preparation }}" required>
+                <input type="text" name="preparation[]" value="{{ preparation }}" required>
             {% endif %}
         </div>
     </div>
@@ -59,3 +59,5 @@
         <textarea name="information" rows="10">{{ recipe.information }}</textarea>
     </div>
 </div>
+
+<button type="submit">Salvar</button>

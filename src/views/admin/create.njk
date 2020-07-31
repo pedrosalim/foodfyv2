@@ -9,21 +9,23 @@
 
 {% block content %}
 
-<section class="recipe_intro">
-    <div class="recipe_text">
-        <h1>Criando receita</h1>
-    </div>
+<form action="/admin/recipes" method="POST">
 
-    <div class="recipe_button">
-        <button class="button_save" type="submit" form="form_save">Salvar Receita</button>
-    </div>
-</section>
+    <section class="recipe_intro">
+        <div class="recipe_text">
+            <h1>Criando receita</h1>
+        </div>
 
-<section class="details_admin">
-    <form action="/admin/recipes" method="POST" id="form_save">
+        <!--<div class="recipe_button">
+            <button class="button_save" type="submit">Salvar Receita</button>
+        </div>-->
+    </section>
+
+    <section class="details_admin">    
         {% include 'admin/fields.njk' %}
-    </form>
-</section>
+    </section>
+
+</form>
 
 {% endblock content %} 
 
