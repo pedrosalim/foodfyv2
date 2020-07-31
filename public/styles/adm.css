@@ -224,6 +224,7 @@ footer p {
     font-size: 18px;
 }
 
+
 /* >>>> FORM <<<< */
 
 input, select {
@@ -233,6 +234,11 @@ input, select {
     font-size: 18px;
     border-style: dashed;
     border-color: #111111;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
 input::placeholder {
@@ -264,5 +270,15 @@ button[type="button"] {
     font-weight: bold;
     font-size: 16px;
     background: none;
+    margin-top: 5px;
     cursor: pointer;
+    outline: none;
+}
+
+textarea {
+    width: 880px;
+    resize: none;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
 }
