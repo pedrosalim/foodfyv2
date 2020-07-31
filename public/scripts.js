@@ -33,7 +33,7 @@ const addField = {
         const parent = document.querySelector(parentSelector)
 
         if(parent) {
-            const fields = parent.querySelector("input")
+            const fields = parent.querySelectorAll("input")
             const lastField = fields[fields.length - 1]
 
             if (lastField && lastField.value === '') return false
@@ -50,7 +50,7 @@ const addField = {
         return false
     },
 
-    list() {
+    listen() {
         const addIngredient = document.querySelector(".addIngredients")
         const addPreparation = document.querySelector(".addPreparations")
 
