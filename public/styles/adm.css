@@ -276,9 +276,13 @@ button[type="button"] {
 }
 
 textarea {
-    width: 880px;
+    width: 100%;
     resize: none;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
+}
+
+.card_content ul, ol {
+    margin-left: 18px;
 }
