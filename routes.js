@@ -7,7 +7,7 @@ const public = require('./controllers/public')
 routes.get("/", public.home)
 routes.get("/about", public.about)
 routes.get("/recipes", public.recipes)
-routes.get("/recipe/:id", public.show)
+routes.get("/recipe/:index", public.show)
 
 
 /* >>>> ADMIN <<<< */
@@ -15,7 +15,9 @@ routes.get("/recipe/:id", public.show)
 routes.get("/admin/recipes/index", recipes.index)
 routes.get("/admin/recipes/create", recipes.create)
 routes.get("/admin/recipes/:id", recipes.show)
+routes.get("/admin/recipes/:id/edit", recipes.edit)
 
 routes.post("/admin/recipes", recipes.post)
+routes.put("/admin/recipes", recipes.put)
 
 module.exports = routes
