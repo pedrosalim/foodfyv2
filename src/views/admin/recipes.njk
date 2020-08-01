@@ -14,7 +14,7 @@
 
 <div class="header">
     <h2>Receita: {{recipe.title}}</h2>
-    <a href="#" class="button">Editar receita</a>
+    <a href="{{ recipe.id }}/edit" class="button">Editar receita</a>
 </div>
 
 <section class="recipes">
@@ -49,11 +49,11 @@
         </div>
 
         <div class="card_content">
-            <ul>
+            <ol>
                 {% for preparation in recipe.preparation %}
                     <li>{{preparation}}</li>
                 {% endfor %}
-            </ul>
+            </ol>
         </div>
     </div>
 

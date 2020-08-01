@@ -21,6 +21,23 @@
 
 <div class="item">
     <div>Ingredientes</div>
+    <div id="newIngredient">
+        {% if (recipes.ingredients.length > 0) %}
+        {% for ingredient in recipe.ingredients %}
+        <div class="ingredient">
+            <input type="text" name="ingredients[]" value="{{ ingredient }}" required>
+        </div>
+        {% endfor %}
+
+        {% else %} 
+            <input type="text" name="ingredients[]" value="{{ ingredient }}">
+        {% endif %}
+    </div>
+    <button type="button" class="addIngredients">Adicionar novo ingrediente</button>
+</div>
+
+<!--<div class="item">
+    <div>Ingredientes</div>
     <div>
         <div id="newIngredient">
             {% if (recipes.ingredients.length > 0) %}
@@ -34,24 +51,50 @@
         </div>
     </div>
     <button type="button" class="addIngredients">Adicionar novo ingrediente</button>
-</div>
+</div>-->
 
 <div class="item">
     <div>Modo de Preparo</div>
     <div>
         <div id="newPreparation">
             {% if (recipe.preparation.length > 0) %}
-                {% for preparation in recipe.preparations %}
+                {% for preparation in recipe.preparation %}
                     <input type="text" name="preparation[]" value="{{ preparation }}" required>
                 {% endfor %}
 
             {% else %}
-                <input type="text" name="preparation[]" value="{{ preparation }}" required>
+                <input type="text" name="preparation[]" required>
             {% endif %}
         </div>
     </div>
     <button type="button" class="addPreparations">Adicionar novo passo</button>
 </div>
+
+
+
+<!--<div class="item">
+    <div>Ingredientes</div>
+    <div id="newIngredient">
+        {% for ingredient in recipe.ingredients %}
+        <div class="ingredient">
+            <input type="text" name="ingredients[]" value="{{ ingredient }}" required>
+        </div>
+        {% endfor %}
+    </div>
+    <button type="button" class="addIngredients">Adicionar novo ingrediente</button>
+</div>
+
+<div class="item">
+    <div>Preparação</div>
+    <div id="newPreparation">
+        {% for preparation in recipe.preparation %}
+        <div class="preparation">
+            <input type="text" name="preparation[]" value="{{preparation}}" required>
+        </div>
+        {% endfor %}
+    </div>
+    <button type="button" class="addPreparations">Adicionar novo passo</button>
+</div>-->
 
 <div class="item">
     <div>Informações Adicionais</div>
@@ -60,4 +103,4 @@
     </div>
 </div>
 
-<button type="submit">Salvar</button>
+<!--<button type="submit">Salvar</button>-->
