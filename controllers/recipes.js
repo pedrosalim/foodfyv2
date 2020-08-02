@@ -3,11 +3,11 @@ const data = require('../data.json')
 // const { FileSystemLoader } = require('nunjucks')
 
 exports.index = function(req, res) {
-    return res.render("admin/index", {recipes: data.recipes})
+    return res.render("./admin/index", {recipes: data.recipes})
 }
 
 exports.create = function(req, res) {
-    return res.render("admin/create")
+    return res.render("./admin/create")
 }
 
 exports.post = function(req, res) {
@@ -60,7 +60,7 @@ exports.show = function(req, res) {
     //const recipeIndex = req.params.index
     //const recipe = recipes[recipeIndex]
  
-    return res.render("./admin/recipes", {recipe})
+    return res.render("admin/recipes", {recipe})
 }
 
 exports.edit = function(req, res) {
@@ -104,6 +104,6 @@ exports.put = function(req, res){
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
         if(err) return res.send("File write error")
 
-        return res.redirect(`/admin/recipes/${id}`)
+        return res.redirect(`recipes/${id}`)
     })
 }
