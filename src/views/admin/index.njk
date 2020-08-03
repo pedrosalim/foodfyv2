@@ -9,9 +9,10 @@
 
 {% block content %}
 
-<h1>Gerenciar Receitas</h1>
-
-<span>Criar</span>
+<div class="top">
+    <h1>Gerenciar Receitas</h1>
+    <a class="buttonCreate" href="/admin/recipes/create">Criar</a>
+</div>
 
 <section class="cards-admin">
     {% for recipe in recipes %}

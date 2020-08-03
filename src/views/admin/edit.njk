@@ -9,12 +9,23 @@
 
 {% block content %}
 
+<section class="textForm">
+
+<div class="recipe_text">
+        <h1>Criando receita</h1>
+        <button class="buttonEdit" type="submit">Editar Receita</button>
+    </div>
+
+<form action="/admin/recipes?_method=DELETE" method="POST" id="form-delete">
+    <input type="hidden" name="id" value={{recipe.id}}>
+        <button class="buttonDelete" type="submit">Deletar</button>
+    </form>
+
+    {% include "admin/confirmDelete.njk" %}
+</section>
+
 <form action="/admin/recipes?_method=PUT" method="POST">
 
-    <div class="recipe_text">
-        <h1>Criando receita</h1>
-        <button type="submit">Editar Receita</button>
-    </div>
 
     <div class="item">
         <div>Imagem da Receita</div>
@@ -75,6 +86,8 @@
     <input type="hidden" name="id" value="{{ recipe.id }}">
 
 </form>
+
+
 
 
 {% endblock content %} 
