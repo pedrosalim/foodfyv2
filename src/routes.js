@@ -1,10 +1,10 @@
 const express = require('express')
 const routes = express.Router()
-const recipes = require('./controllers/recipes')
-const public = require('./controllers/public')
+const recipes = require('./app/controllers/recipes')
+const public = require('./app/controllers/public')
 
 /* >>>> ROUTES PRINCIPAIS <<<< */
-routes.get("/", public.home)
+routes.get("/", public.index)
 routes.get("/about", public.about)
 routes.get("/recipes", public.recipes)
 routes.get("/recipe/:index", public.show)
