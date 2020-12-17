@@ -1,6 +1,12 @@
+const db = require("../../config/db")
+
 module.exports = {
     index(req, res) {
-        return res.render("index")
+        db.query(`SELECT * FROM recipes`, function(err, results) {
+            if(err) return res.send("Database Error")
+
+            return res.render("index", {recipes: results.rows})
+        })
     },
     about(req, res) {
         return res.render("about")
