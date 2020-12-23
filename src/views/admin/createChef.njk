@@ -1,0 +1,36 @@
+{% extends "chefs/layoutAdm.njk" %}
+
+
+{% block header %}
+    <header class="adminHeader">
+        <a class="logo" href="/admin/recipes/index"><img src="/assets/logo-white.png" alt="FOODFY"></a>
+    </header>  
+{% endblock header %}
+
+{% block content %}
+
+    <form action="/admin/chefs" method="POST">
+        <div class="recipe_text">
+            <h1>Criando Chefs</h1>
+            <button type="submit">Salvar Chef</button>
+        </div>
+
+        <div class="item">
+            <div>Imagem do Chef</div>
+            <div>
+                <input type="url" name="avatar_url">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Nome do Chef</div>
+            <div>
+                <input type="text" name="name">
+            </div>
+        </div>
+
+        
+
+    </form>
+
+{% endblock content %}

@@ -1,11 +1,9 @@
-const db = require("../../config/db")
+const Public = require('../models/Public')
 
 module.exports = {
     index(req, res) {
-        db.query(`SELECT * FROM recipes`, function(err, results) {
-            if(err) return res.send("Database Error")
-
-            return res.render("index", {recipes: results.rows})
+        Public.all(function(recipes) {
+            return res.render("./index", { recipes })
         })
     },
     about(req, res) {
@@ -15,11 +13,11 @@ module.exports = {
         return res.render("recipes")
     },
     show(req, res) {
-        const index = req.params.index;
+        Public.find(req.params.id, function(recipe) {
+            if (!recipe) return res.send("Recipe not found!")
 
-        const recipe = data.recipes.find(recipe => recipe.id == index);
-    
-        res.render("./recipe");
+            return res.render("./recipe", {recipe})
+        })
     
         /*const { id } = req.params
     
