@@ -13,17 +13,15 @@
 
 <div class="top">
     <h1>Gerenciar Receitas</h1>
-    <a class="buttonCreate" href="/admin/recipes/create">Criar</a>
-    <a class="buttonCreate" href="/admin/chefs/create">Criar Chef</a>
+    <a class="buttonCreateChef" href="/admin/chefs/create">Criar Chef</a>
 </div>
 
-<section class="cards-admin">
-    {% for recipe in recipes %}
-        <div class="card-admin" id="{{loop.index0}}">
-            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
-            <h4 class="title-admin">{{recipe.title}}</h4>
-            <p class="author-admin">{{recipe.author}}</p>
-            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+<section class="cards-admin-chef">
+    {% for chef in chefs %}
+        <div class="card-admin-chef" id="{{loop.index0}}">
+            <img src="{{chef.avatar_url}}" alt="Imagem de {{chef.name}}">
+            <h4 class="title-admin">{{chef.name}}</h4>
+            <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
         </div>
     {% endfor %}
 </section>

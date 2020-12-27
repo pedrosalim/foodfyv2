@@ -25,10 +25,20 @@ module.exports = {
           date(Date.now()).iso
         ]
 
-    db.query(query, values, function(err, results) {
-        if(err) throw `Database error! ${err}`
+        db.query(query, values, function(err, results) {
+            if(err) throw `Database error! ${err}`
 
-        callback(results.rows[0])
-    })
+            callback(results.rows[0])
+        })
+    },
+    find(id, callback) {
+        db.query(`
+            SELECT * 
+            FROM chefs 
+            WHERE id = $1`, [id], function(err, results) {
+                if(err) throw `Database error! ${err}`
+
+                callback(results.rows[0])
+        })
     },
 }

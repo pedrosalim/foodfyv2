@@ -14,6 +14,7 @@ routes.get("/recipe/:id", public.show)
 /* >>>> ADMIN <<<< */
 
 routes.get("/admin/recipes/index", recipes.index)
+routes.get("/admin/chefIndex", chefs.index)
 routes.get("/admin/recipes/create", recipes.create)
 routes.get("/admin/recipes/:id", recipes.show)
 routes.get("/admin/recipes/:id/edit", recipes.edit)
@@ -22,7 +23,7 @@ routes.get("/admin/chefs/create", chefs.create)
 routes.post("/admin/recipes", recipes.post)
 routes.put("/admin/recipes", recipes.put)
 routes.delete("/admin/recipes", recipes.delete)
-routes.get("/admin/chefs", chefs.post)
+routes.post("/admin/chefs", chefs.post)
 
 
 /* >>>> CHEFS <<<< */

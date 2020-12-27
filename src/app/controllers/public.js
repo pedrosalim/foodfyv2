@@ -10,7 +10,9 @@ module.exports = {
         return res.render("about")
     },
     recipes(req, res) {
-        return res.render("recipes")
+        Public.all(function(recipes) {
+            return res.render("./recipes", { recipes })
+        })
     },
     show(req, res) {
         Public.find(req.params.id, function(recipe) {

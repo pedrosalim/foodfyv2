@@ -1,0 +1,45 @@
+.buttonCreateChef {
+    background-color: #6558C3;
+    color: white;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    padding: 6px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.buttonCreateChef:hover {
+    background-color: #564baa;
+    transition: 300ms;
+}
+
+.cards-admin-chef {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    cursor: pointer;
+}
+
+.cards-admin-chef img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+.cards-admin-chef h4 {
+    color: var(--color_primary);
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-top: 7%;
+}
+
+.cards-admin-chef a {
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: bold;
+}
