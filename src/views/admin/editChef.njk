@@ -1,0 +1,46 @@
+{% extends "admin/layoutAdm.njk" %}
+
+
+{% block header %}
+    <header class="adminHeader">
+        <a class="logo" href="#"><img src="/assets/logo-white.png" alt="FOODFY"></a>
+        <a href="/admin/recipes/index">Receitas</a>
+        <a href="/admin/chefIndex">Chefs</a>
+    </header>  
+{% endblock header %}
+
+{% block content %}
+
+    <form action="/admin/chefs?_method=PUT" method="POST">
+        <div class="recipe_text">
+            <h1>Editar Chefs</h1>
+            <button type="submit">Salvar Chef</button>
+        </div>
+
+        <div class="item">
+            <div>Nome do Chef</div>
+            <div>
+                <input type="text" name="name" value="{{ chef.name }}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Imagem do Chef</div>
+            <div>
+                <input type="url" name="avatar_url" value="{{ chef.avatar_url }}">
+            </div>
+        </div>
+
+        
+    </form>
+
+    <section class="textForm">
+        <form action="/admin/chefs?_method=DELETE" method="POST" id="form-delete">
+            <input type="hidden" name="id" value={{chef.id}}>
+                <button class="buttonDelete" type="submit">Deletar</button>
+        </form>
+
+        {% include "admin/confirmDelete.njk" %}
+    </section>
+
+{% endblock content %}

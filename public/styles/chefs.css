@@ -18,6 +18,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     cursor: pointer;
+
 }
 
 .cards-admin-chef img {
@@ -26,6 +27,7 @@
     border-radius: 50%;
     margin-right: 20px;
     float: left;
+    margin-bottom: 20px !important;
 }
 
 .cards-admin-chef h4 {

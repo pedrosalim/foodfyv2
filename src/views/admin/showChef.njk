@@ -11,26 +11,26 @@
 
 {% block content %}
 
-<div class="top">
-    <h1>Gerenciar Chefs</h1>
-    <a class="buttonCreateChef" href="/admin/chefs/create">Criar Chef</a>
+
+
+<div class="header">
+    <h2>Chef: {{chef.name}}</h2>
+    <a href="{{ chef.id }}/editChef" class="button">Editar Chef</a>
 </div>
 
-<section class="cards-admin-chef">
-    {% for chef in chefs %}
-        <div class="card-admin-chef" id="{{loop.index0}}">
+<section class="chefs">
+    <div class="chef_card">
             <img src="{{chef.avatar_url}}" alt="Imagem de {{chef.name}}">
             <h4 class="title-admin">{{chef.name}}</h4>
-            <a href="/admin/showChef/{{chef.id}}">Visualizar</a>
-        </div>
-    {% endfor %}
+            <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+    </div>
 </section>
 
-{% endblock content %} 
+<section class="most_information">
 
-{% block scripts %}
-    <script src="/scripts.js"></script>
-{% endblock scripts %}
+</section>
+
+{% endblock content %}
 
 {% block footer %}
     <footer>

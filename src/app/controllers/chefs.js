@@ -29,7 +29,7 @@ module.exports = {
         Chef.find(req.params.id, function(chef) {
             if (!chef) return res.send("chef not found!")
 
-            return res.render("admin/chefIndex", {chef})
+            return res.render("admin/showChef", {chef})
         })
     }
 }
