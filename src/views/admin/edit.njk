@@ -1,12 +1,5 @@
 {% extends "admin/layoutAdm.njk" %}
 
-
-{% block header %}
-    <header class="adminHeader">
-        <a class="logo" href="/admin/recipes/index"><img src="/assets/logo-white.png" alt="FOODFY"></a>
-    </header>  
-{% endblock header %}
-
 {% block content %}
 
 
@@ -28,7 +21,13 @@
     <div class="item">
         <div>Nome do Chef</div>
         <div>
-            <input type="text" name="author" value="{{ recipe.author }}">
+            <select name="chef">
+                {% for chef in chefOptions %}
+                    <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {% endif %}>
+                        {{chef.name}}
+                    </option>
+                {% endfor %}
+            </select>
         </div>
     </div>
 

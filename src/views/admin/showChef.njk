@@ -22,12 +22,24 @@
     <div class="chef_card">
             <img src="{{chef.avatar_url}}" alt="Imagem de {{chef.name}}">
             <h4 class="title-admin">{{chef.name}}</h4>
+            <p>{{ chef.total_recipes }} Receitas</p>
             <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
     </div>
 </section>
 
 <section class="most_information">
-
+    {% for recipe in recipes %}
+    <div class="menu-item" id="{{recipe.id}}">
+      <div class="item-image">
+        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+      </div>
+      <div class="item-information">
+        <h5>{{recipe.title}}</h5>
+        <p>por {{ chef.name }}</p>
+        <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+      </div>
+    </div> 
+    {% endfor %}
 </section>
 
 {% endblock content %}

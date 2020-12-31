@@ -6,61 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/chefs.css">
+
 
         <title>FOODFY</title>
     </head>
 {% endblock head %}
 
 <div class="content">
-    {% block header %}
-        <header>
-            <a class="logo" href="/"><img src="/assets/logo.png" alt="FOODFY"></a>
-            <a href="/about">Sobre</a>
-            <a href="/recipes">Receitas</a>
-            <a href="/chefs">Chefs</a>
-        </header>
-        {% endblock header %}
+
     {% block content %}
         
-        {% for chef in chefs%}
-            <div class="menu-item chef" id="{{chef.id}}">
-                <img 
-                src="{{chef.avatar_url}}" 
-                alt="{{chef.name}}"
-                class="chef-image"
-                >
-                <div class="item-information">
-                <h5>{{chef.name}}</h5>
-                <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
-                </div>
+    <section class="cards-admin-chef">
+        {% for chef in chefs %}
+            <div class="card-admin-chef" id="{{loop.index0}}">
+                <img src="{{chef.avatar_url}}" alt="Imagem de {{chef.name}}">
+                <h4 class="title-admin">{{chef.name}}</h4>
+                <p>{{ chef.total_recipes }} Receitas</p>
+                {# <a href="/admin/chefs/{{chef.id}}">Visualizar</a> #}
             </div>
         {% endfor %}
-
-        <section class="cards">
-            {% for recipe in recipes %}
-                <div class="card" id="{{recipe.id}}">
-                    <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
-                    <h4 class="title">{{recipe.title}}</h4>
-                    <p class="author">Por {{recipe.author}}</p>
-                </div>
-            {% endfor %}
-        </section>
+    </section>
 
 {% endblock content %}
 
 
-
-</div>
-    
-
-
-{% block scripts %}
-    <script src="/scripts.js"></script>
-{% endblock scripts %}
-
-        
-{% block footer %}
-    <footer>
-        <p>Todos os direitos reservados, receitas FOODFY.</p>
-    </footer>
-{% endblock footer %}

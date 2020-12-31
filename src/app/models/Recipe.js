@@ -19,8 +19,9 @@ module.exports = {
             ingredients,
             preparation,
             information,
-            created_at
-        ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+            created_at,
+            chef_id
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
         RETURNING id
     `
     
@@ -31,6 +32,7 @@ module.exports = {
         data.ingredients,
         data.preparation,
         data.information,
+        data.chef,
         date(Date.now()).iso
     ]
 
@@ -57,8 +59,9 @@ module.exports = {
                 title=($2),
                 ingredients=($3),
                 preparation=($4),
-                information=($5)
-            WHERE id = $6
+                information=($5),
+                chef_id=($6)
+            WHERE id = $7
         `
 
         const values = [
@@ -67,6 +70,7 @@ module.exports = {
             data.ingredients,
             data.preparation,
             data.information,
+            data.chef,
             data.id
         ]
 
@@ -81,6 +85,13 @@ module.exports = {
             if(err) throw `Database error! ${err}`
 
             return callback()
+        })
+    },
+    chefSelectOptions(callback) {
+        db.query(`SELECT name, id FROM chefs`, function(err, results) {
+            if(err) throw `Database error! ${err}`
+
+            callback(results.rows)
         })
     }
 }

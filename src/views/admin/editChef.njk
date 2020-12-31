@@ -11,7 +11,7 @@
 
 {% block content %}
 
-    <form action="/admin/chefs?_method=PUT" method="POST">
+    <form action="/admin/editChef?_method=PUT" method="POST">
         <div class="recipe_text">
             <h1>Editar Chefs</h1>
             <button type="submit">Salvar Chef</button>
@@ -30,6 +30,8 @@
                 <input type="url" name="avatar_url" value="{{ chef.avatar_url }}">
             </div>
         </div>
+
+        <input type="hidden" name="id" value="{{ chef.id }}">
 
         
     </form>

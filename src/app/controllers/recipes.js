@@ -7,7 +7,12 @@ module.exports = {
         })
     },
     create(req, res) {
-        return res.render("./admin/create")
+
+        Recipe.chefSelectOptions(function(options) {
+            return res.render("./admin/create", { chefOptions: options })
+
+        })
+
     },
     post(req, res) {
         const keys = Object.keys(req.body)
@@ -50,10 +55,16 @@ module.exports = {
         
     },
     edit(req, res) {
+
+        
         Recipe.find(req.params.id, function(recipe) {
             if (!recipe) return res.send("Recipe not found!")
 
-            return res.render("admin/edit", {recipe})
+            Recipe.chefSelectOptions(function(options) {
+                return res.render("./admin/edit", { recipe, chefOptions: options })
+    
+            })
+
         })
     },
     put(req, res) {

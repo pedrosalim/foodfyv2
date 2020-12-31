@@ -25,7 +25,13 @@
         <div class="item">
             <div>Nome do Chef</div>
             <div>
-                <input type="text" name="author">
+                <select name="chef">
+                    {% for chef in chefOptions %}
+                        <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {% endif %}>
+                            {{chef.name}}
+                        </option>
+                    {% endfor %}
+                </select>
             </div>
         </div>
 

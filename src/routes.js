@@ -16,20 +16,24 @@ routes.get("/recipe/:id", public.show)
 routes.get("/admin/recipes/index", recipes.index)
 routes.get("/admin/chefIndex", chefs.index)
 routes.get("/admin/recipes/create", recipes.create)
-routes.get("/admin/recipes/:id", recipes.show)
-routes.get("/admin/showChef/:id", chefs.show)
-routes.get("/admin/recipes/:id/edit", recipes.edit)
 routes.get("/admin/chefs/create", chefs.create)
+routes.get("/admin/recipes/:id", recipes.show)
+routes.get("/admin/chefs/:id", chefs.show)
+routes.get("/admin/recipes/:id/edit", recipes.edit)
+routes.get("/admin/chefs/:id/editChef", chefs.edit)
 
 routes.post("/admin/recipes", recipes.post)
-routes.put("/admin/recipes", recipes.put)
-routes.delete("/admin/recipes", recipes.delete)
 routes.post("/admin/chefs", chefs.post)
+routes.put("/admin/recipes", recipes.put)
+routes.put("/admin/editChef", chefs.put)
+routes.delete("/admin/recipes", recipes.delete)
 
 
 /* >>>> CHEFS <<<< */
 
 routes.get("/chefs", chefs.index)
+routes.get("/chefspublic", chefs.indexPublic)
+
 
 
 
